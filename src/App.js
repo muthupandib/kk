@@ -3,11 +3,11 @@ import {Component} from 'react'
 import Login from './components/login'
 import Home from './components/Home'
 import Trending from './components/Trending'
-import Gaming from './components/Gaming'
-import SavedVideos from './components/SavedVideos'
-import NotFound from './components/NotFound'
-import VideoItemDetails from './components/VideoItemDetails'
-import ProtectedRoute from './components/ProtectedRoute'
+import Gaming from './Components/Gaming'
+import SavedVideos from './Components/SavedVideos'
+import NotFound from './Components/NotFound'
+import VideoItemDetails from './Components/VideoItemDetails'
+import ProtectedRoute from './Components/ProtectedRoute'
 import ActiveMenuContext from './Context/ActiveMenuContext'
 import ThemeContext from './Context/ThemeContext'
 import SavedVideosContext from './Context/SavedVideosContext'
@@ -78,22 +78,22 @@ class App extends Component {
             value={{activeMenu, changeActiveMenu: this.changeActiveMenu}}
           >
             <Switch>
-              <Route exact path="/login" component={Login} />
-              <ProtectedRoute exact path="/" component={Home} />
-              <ProtectedRoute exact path="/trending" component={Trending} />
-              <ProtectedRoute exact path="/gaming" component={Gaming} />
+              <Route exact path='/login' component={Login} />
+              <ProtectedRoute exact path='/' component={Home} />
+              <ProtectedRoute exact path='/trending' component={Trending} />
+              <ProtectedRoute exact path='/gaming' component={Gaming} />
               <ProtectedRoute
                 exact
-                path="/saved-videos"
+                path='/saved-videos'
                 component={SavedVideos}
               />
               <ProtectedRoute
                 exact
-                path="/videos/:id"
+                path='/videos/:id'
                 component={VideoItemDetails}
               />
-              <ProtectedRoute exact path="/not-found" component={NotFound} />
-              <Redirect to="/not-found" />
+              <ProtectedRoute exact path='/not-found' component={NotFound} />
+              <Redirect to='/not-found' />
             </Switch>
           </ActiveMenuContext.Provider>
         </SavedVideosContext.Provider>
