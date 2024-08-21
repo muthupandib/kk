@@ -78,22 +78,22 @@ class App extends Component {
             value={{activeMenu, changeActiveMenu: this.changeActiveMenu}}
           >
             <Switch>
-              <Route exact path="/login" component={Login} />
-              <ProtectedRoute exact path="/" component={Home} />
-              <ProtectedRoute exact path="/trending" component={Trending} />
-              <ProtectedRoute exact path="/gaming" component={Gaming} />
+              <Route exact path='/login' component={Login} />
+              <ProtectedRoute exact path='/' component={Home} />
+              <ProtectedRoute exact path='/trending' component={Trending} />
+              <ProtectedRoute exact path='/gaming' component={Gaming} />
               <ProtectedRoute
                 exact
-                path="/saved-videos"
+                path='/saved-videos'
                 component={SavedVideos}
               />
               <ProtectedRoute
                 exact
-                path="/videos/:id"
+                path='/videos/:id'
                 component={VideoItemDetails}
               />
-              <ProtectedRoute exact path="/not-found" component={NotFound} />
-              <Redirect to="/not-found" />
+              <ProtectedRoute exact path='/not-found' component={NotFound} />
+              <Redirect to='/not-found' />
             </Switch>
           </ActiveMenuContext.Provider>
         </SavedVideosContext.Provider>
