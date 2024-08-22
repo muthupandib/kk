@@ -3,7 +3,7 @@ import {IoLogoGameControllerB} from 'react-icons/io'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import Header from '../Header'
-import Sidebar from '../Sidebar'
+import Sidebar from '../SideBar'
 
 import {
   MainBody,
